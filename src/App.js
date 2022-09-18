@@ -1,4 +1,6 @@
 import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import HeroSection from './components/HeroSection';
 import NavBar from './components/NavBar';
@@ -12,6 +14,8 @@ function App() {
       <Services />
       <Gallery />
       <About />
+      <Contact />
+      <Footer />
     </>
   );
 }

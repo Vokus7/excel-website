@@ -40,7 +40,7 @@ const Services = () => {
 
 
     return (
-        <div name="services" className='h-screen w-full mb-96'>
+        <div name="services" className='h-fit w-full mb-20'>
             <div className='max-w-screen-lg px-4 pt-20 mx-auto flex flex-col justify-start w-full h-full'>
                 <div className='mt-2'>
                     <p className='text-4xl font-bold inline border-b-4 border-blue-400 text-blue-400 mb-5'>
