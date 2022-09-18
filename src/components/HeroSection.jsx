@@ -4,7 +4,7 @@ import HeroImage from "../assets/heroimage.jpg";
 const HeroSection = () => {
     return (
         <div name="herosection" className='h-screen w-full'>
-            <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 pt-40 md:flex-row">
+            <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-8 pt-32 md:flex-row">
                 <div className="flex flex-col justify-center py-0 my-0 h-full">
                     <h2 className="text-5xl sm:text-7xl font-bold text-blue-400">
                         EXCEL
