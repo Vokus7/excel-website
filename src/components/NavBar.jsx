@@ -32,7 +32,7 @@ const NavBar = () => {
 
 
     return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-blue-400 bg-white fixed">
+        <div className="flex justify-between items-center bg-white w-full h-20 px-4 text-blue-400 fixed z-40">
             <div>
                 <h1 className="text-5xl font-signature ml-2">
                     <Link to="home" smooth duration={600} className="cursor-pointer">Excel</Link>

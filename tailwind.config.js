@@ -7,7 +7,10 @@ module.exports = {
     extend: {},
     fontFamily: {
       signature: ["Great Vibes"],
-    }
+    },
+    colors: {
+      'regal-blue': '#000A21',
+    },
   },
   plugins: [],
 }
