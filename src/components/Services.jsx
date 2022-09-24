@@ -40,11 +40,11 @@ const Services = () => {
 
 
     return (
-        <div name="services" className='h-fit w-full mb-20'>
+        <div name="services" className='h-fit w-full mb-10  bg-gradient-to-r from-zinc-50 to bg-cyan-400 via-cyan-100 pb-6'>
             <div className='max-w-screen-lg px-4 pt-20 mx-auto flex flex-col justify-start w-full h-full'>
                 <div className='mt-2'>
                     <p className='text-4xl font-bold inline border-b-4 border-blue-400 text-blue-400 mb-5'>
-                        Services
+                        Our Services
                     </p>
                 </div>
                 <div className='grid sm:grid-cols-2 sm:p-0 md:grid-cols-3 gap-8 px-10 md:pt-11 pt-9'>
@@ -53,7 +53,7 @@ const Services = () => {
                             <div key={id} className='shadow-md shadow-blue-400 rounded-lg'>
                                 <img src={src} alt={title} className="rounded-md hover:scale-105 duration-200 md:max-h-52 w-full" />
                                 <div className='flex first-letter:items-center justify-center'>
-                                    <button className='w-full px-4 py-1 duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
+                                    <button className='w-full px-4 py-1 font-semibold duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
                                 </div>
                             </div>
                         ))

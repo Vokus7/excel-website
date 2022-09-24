@@ -1,41 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 
 const Gallery = () => {
+
+    const slideLeft = () => {
+        var slider = document.getElementById('slider')
+        slider.scrollLeft = slider.scrollLeft - 300;
+    };
+    const slideRight = () => {
+        var slider = document.getElementById('slider')
+        slider.scrollLeft = slider.scrollLeft + 300;
+    };
+
     return (
-        <div name="gallery" className='h-fit w-full mb-20'>
-            <div className='max-w-screen-lg px-4 mx-auto flex flex-col justify-start w-full h-full'>
-                <div className='mt-2'>
-                    <p className='text-4xl font-bold inline border-b-4 border-blue-400 text-blue-400 mb-9'>
-                        Gallery
-                    </p>
+        <div name="gallery" className='h-fit w-full mb-10 md:pt-36'>
+            <div className='flex flex-col items-center'>
+                <p className='text-3xl font-bold inline w-[122px] text-gray-900 mb-5 mx-10'>
+                    Gallery
+                </p>
+                <div className='h-full w-full flex items-center'>
+                    <MdChevronLeft className='opacity-50 hover:opacity-100' onClick={slideLeft} size={40} />
+                    <div id='slider' className='h-fit w-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+                        <div className="h-full w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                        </div>
+                        <div className="w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                    </div>
+                        <div className="w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                    </div>
+                        <div className="w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                    </div>
+                        <div className="w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                    </div>
+                        <div className="w-full md:w-2/4 inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                            alt="watch" />
+                    </div>
                 </div>
-                <div className='grid sm:grid-cols-2 sm:p-0 md:grid-cols-3 gap-8 pt-16 md:pt-16 px-10'>
-                    <div className="w-full rounded">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
-                    <div className="w-full rounded">
-                        <img src="httpwatchs.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
-                    <div className="w-full rounded">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
-                    <div className="w-full rounded">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
-                    <div className="w-full rounded">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
-                    <div className="w-full rounded">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                            alt="watch" />
-                    </div>
+                    <MdChevronRight className='opacity-50 hover:opacity-100' onClick={slideRight} size={40} />
                 </div>
-                <button className='text-white bg-gradient-to-r from-cyan-500 to to-blue-500 px-5 py-2 mt-11 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>See more</button>
             </div>
         </div >
     )

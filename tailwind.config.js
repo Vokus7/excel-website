@@ -8,9 +8,8 @@ module.exports = {
     fontFamily: {
       signature: ["Great Vibes"],
     },
-    colors: {
-      'regal-blue': '#000A21',
-    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
