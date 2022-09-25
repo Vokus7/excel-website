@@ -24,17 +24,17 @@ const Footer = () => {
                         </form>
                     </div>
                 </div>
-                <div className='flex'>
+                <div className='flex md:flex-row flex-col'>
                     <div className='flex flex-col py-4 px-2'>
                         <span className='text-2xl font-semibold text-green-600 font-["Open_Sans"]'>WORKING HOURS</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Mondays: 8:00am - 6:00pm</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Tuesdays: 8:00am - 6:00pm</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Wednesdays: 8:00am - 6:00pm</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Thursdays: 8:00am - 6:00pm</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Fridays: 8:00am - 6:00pm</span>
-                        <span className='py-1 font-["Open_Sans"] text-lg'>Saturdays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Mondays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Tuesdays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Wednesdays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Thursdays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Fridays: 8:00am - 6:00pm</span>
+                        <span className='py-1 font-["Times_New_Roman"] text-lg'>Saturdays: 8:00am - 6:00pm</span>
                     </div>
-                    <div className='flex flex-col py-4 pl-11'>
+                    <div className='flex flex-col py-4 pl-2 md:pl-8'>
                         <span className='text-2xl font-semibold text-green-600 font-["Open_Sans"]'>Links</span>
                         <span className='py-1 font-["Open_Sans"] text-lg cursor-pointer hover:text-green-600'>Services</span>
                         <span className='py-1 font-["Open_Sans"] text-lg cursor-pointer hover:text-green-600'>Gallery</span>

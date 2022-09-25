@@ -1,5 +1,5 @@
 import About from './components/About';
-import Contact from './components/Contact';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import HeroSection from './components/HeroSection';
@@ -14,7 +14,7 @@ function App() {
       <Services />
       <Gallery />
       <About />
-      <Contact />
+      <Blog />
       <Footer />
     </>
   );
