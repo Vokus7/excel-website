@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa"
+import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className='flex flex-col w-full h-fit py-4 bg-black text-white pt-8 sm:pt-8'>
+        <div className='flex flex-col w-full h-fit py-4 bg-[#0F1D39] text-white pt-8 sm:pt-8'>
             <div className='flex flex-col md:flex-row w-full px-8'>
                 <div className='flex flex-col px-2'>
                     <div className='pb-6 mr-8'>
@@ -20,7 +20,7 @@ const Footer = () => {
                                 <input type="text" name="name" placeholder="Enter your name" className="mr-3 mb-3 md:mb-0 w-full md:w-60 p-2 bg-white border text-black border-gray-400 focus:outline-none" />
                                 <input type="email" name="email" placeholder="Enter your email" className="w-full md:w-56 p-2 bg-white border text-black border-gray-400 focus:outline-none" />
                             </div>
-                            <button className='text-white bg-black w-full sm:w-fit md:w-[475px] justify-center border border-white px-5 py-2 my-5 md:my-8 flex items-center hover:scale-110 duration-300'>SIGN UP</button>
+                            <button className='text-white bg-[#0F1D39] w-full sm:w-fit md:w-[475px] justify-center border border-white px-5 py-2 my-5 md:my-8 flex items-center hover:scale-110 duration-300'>SIGN UP</button>
                         </form>
                     </div>
                 </div>
