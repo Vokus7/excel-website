@@ -13,9 +13,9 @@ const Gallery = () => {
     };
 
     return (
-        <div name="gallery" className='h-fit w-full mb-10 md:pt-36'>
-            <div className='flex flex-col items-center'>
-                <p className='text-3xl font-bold inline w-[122px] text-gray-900 mb-5 mx-10'>
+        <div name="gallery" className='h-fit w-full mb-10 md:pt-24 pt-16'>
+            <div className='flex flex-col items-center mt-2'>
+                <p className='text-3xl font-bold inline w-fit text-gray-900 mb-5 mx-10 leading-relaxed border-b-4 border-blue-400'>
                     Gallery
                 </p>
                 <div className='h-full w-full flex items-center'>

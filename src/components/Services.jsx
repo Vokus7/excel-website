@@ -40,10 +40,10 @@ const Services = () => {
 
 
     return (
-        <div name="services" className='h-fit w-full mb-10  bg-gradient-to-r from-zinc-50 to bg-cyan-400 via-cyan-100 pb-6'>
-            <div className='max-w-screen-lg px-4 pt-20 mx-auto flex flex-col justify-start w-full h-full'>
+        <div name="services" className='h-fit w-full mb-10 pb-6 md:pt-4 pt-16'>
+            <div className='max-w-screen-lg px-4 md:pt-20 mx-auto flex flex-col justify-start items-center w-full h-full'>
                 <div className='mt-2'>
-                    <p className='text-4xl font-bold inline border-b-4 border-blue-400 text-blue-400 mb-5'>
+                    <p className='text-3xl font-bold inline border-b-4 border-blue-400 text-gray-900 w-fit leading-relaxed mb-5'>
                         Our Services
                     </p>
                 </div>
