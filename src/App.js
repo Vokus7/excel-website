@@ -6,6 +6,8 @@ import HeroSection from './components/HeroSection';
 import NavBar from './components/NavBar';
 import Services from './components/Services';
 import SocialLinks from './components/SocialLinks';
+import Testimonials from './components/Testimonials';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <Gallery />
       <About />
       <Blog />
+      <Testimonials />
       <Footer />
     </>
   );
