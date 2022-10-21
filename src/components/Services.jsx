@@ -4,6 +4,8 @@ import Dental_crown from "../assets/services/dental crown1.jpg";
 import Flexible_denture from "../assets/services/flexible-denture2.jpg";
 import Removable_denture from "../assets/services/Rpd.jpg";
 import Scaling from "../assets/services/scaling & polishing.webp";
+import Tooth_extraction from "../assets/services/tooth-extraction.jpg";
+
 
 
 
@@ -36,6 +38,11 @@ const Services = () => {
             src: Scaling,
             title: "Scaling & Polishing",
         },
+        {
+            id: 6,
+            src: Tooth_extraction,
+            title: "Extraction",
+        },
     ]
 
 
@@ -43,7 +50,7 @@ const Services = () => {
         <div name="services" className='h-fit w-full mb-10 pb-6 md:pt-4 pt-16'>
             <div className='max-w-screen-lg px-4 md:pt-20 mx-auto flex flex-col justify-start items-center w-full h-full'>
                 <div className='mt-2'>
-                    <p className='text-3xl font-bold inline border-b-4 border-blue-400 text-gray-900 w-fit leading-relaxed mb-5'>
+                    <p className='text-3xl font-bold inline py-2 border-b-4 border-blue-400 text-gray-900 w-fit leading-relaxed mb-5'>
                         Our Services
                     </p>
                 </div>

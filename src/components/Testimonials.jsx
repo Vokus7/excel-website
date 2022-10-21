@@ -7,7 +7,7 @@ import { ImQuotesRight } from 'react-icons/im';
 
 const Testimonials = () => {
     return (
-        <div className='flex bg-gray-200 flex-col items-center justify-start w-full h-fit px-4'>
+        <div name="testimonials" className='flex bg-gray-200 flex-col items-center justify-start w-full h-fit px-4 pt-11'>
             <p className='text-3xl font-bold text-gray-800 py-6'>
                 Here's what our <span className='text-orange-600'>clients</span> have to say about us
             </p>

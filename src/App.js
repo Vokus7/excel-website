@@ -1,27 +1,28 @@
-import About from './components/About';
-import Blog from './components/Blog';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
-import Gallery from './components/Gallery';
-import HeroSection from './components/HeroSection';
 import NavBar from './components/NavBar';
-import Services from './components/Services';
+import Blogspot from './components/Pages/Blogspot';
+import Home from './components/Pages/Home';
 import SocialLinks from './components/SocialLinks';
-import Testimonials from './components/Testimonials';
 
 
 function App() {
   return (
-    <>
+    <Router>
+      <div>
       <SocialLinks />
       <NavBar />
-      <HeroSection />
-      <Services />
-      <Gallery />
-      <About />
-      <Blog />
-      <Testimonials />
-      <Footer />
-    </>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/blogspot">
+            <Blogspot />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

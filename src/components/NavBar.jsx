@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { Link as NavLink } from "react-router-dom";
 import Logo from '../assets/logo/White logo.svg';
 
 
@@ -28,6 +29,10 @@ const NavBar = () => {
         {
             id: 5,
             link: 'blog'
+        },
+        {
+            id: 5,
+            link: 'testimonials'
         }
     ]
 
@@ -36,7 +41,7 @@ const NavBar = () => {
         <div className="flex w-full h-16 bg-[#0F1D39] text-white items-center justify-between sticky top-0 z-40">
             <div className='flex w-40 md:h-14 justify-start md:ml-6 pb-2 items-start md:mt-4 mt-4 mr-4'>
                 <h1 className="px-2">
-                    <Link to="home" smooth duration={600} className="cursor-pointer"><img src={Logo} alt="excel logo" /></Link>
+                    <NavLink to="/" smooth duration={600} className="cursor-pointer"><img src={Logo} alt="excel logo" /></NavLink>
                 </h1>
             </div>
             <ul className="hidden md:flex">
