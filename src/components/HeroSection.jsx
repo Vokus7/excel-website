@@ -1,15 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 
 const HeroSection = () => {
     return (
-        <div name="home" className='h-screen md:h-screen w-full relative md:pb-0 pb-56'>
-            <div className='w-full h-full flex flex-col'>
+        <div name="home" className='h-screen md:h-screen w-full relative'>
+            <div className='w-full h-full flex flex-col overflow-hidden'>
                 <div className="md:h-96 h-72 w-full relative">
-                    <div className="absolute w-full">
+                    <motion.div
+                        animate={{ scale: 1.2 }}
+                        transition={{ duration: 3 }}
+                        className="absolute w-full">
                         <img src="https://cdn.pixabay.com/photo/2017/08/05/14/59/chair-2584260_960_720.jpg"
                             alt="clinic" className="object-fill md:object-fill absolute w-full h-screen" />
-                    </div>
+                    </motion.div>
                     <div className="relative h-screen w-full flex px-auto">
                         <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full">
                         </div>
