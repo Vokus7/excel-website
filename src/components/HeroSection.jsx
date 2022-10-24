@@ -13,7 +13,7 @@ const HeroSection = () => {
                     <div className="relative h-screen w-full flex px-auto">
                         <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full">
                         </div>
-                        <div className="absolute z-10 mt-24 md:mt-56 md:px-10 w-full">
+                        <div className="absolute z-10 mt-24 md:mt-40 md:px-10 w-full">
                             <div className="flex flex-col justify-center w-full py-0 my-0 h-96 md:mt-0 mt-16 px-8 backdrop-blur-sm relative">
                                 <h2 className="text-5xl sm:text-7xl font-bold text-green-400 font-serif">
                                     EXCEL
