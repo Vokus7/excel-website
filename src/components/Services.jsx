@@ -5,12 +5,37 @@ import Flexible_denture from "../assets/services/flexible-denture2.jpg";
 import Removable_denture from "../assets/services/Rpd.jpg";
 import Scaling from "../assets/services/scaling & polishing.webp";
 import Tooth_extraction from "../assets/services/tooth-extraction.jpg";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+import { useAnimation } from 'framer-motion';
 
 
 
 
 
 const Services = () => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.1
+    });
+    const animation = useAnimation()
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                x: 0,
+                initial: { opacity: 0, translateX: -50, translateY: -50 },
+                animate: { opacity: 1, translateX: 0, translateY: 0 },
+                transition: { type: 'spring', bounce: 0.4, duration: 3 }
+            });
+        }
+        if (!inView) {
+            animation.start({
+                x: '-100vw'
+            })
+        }
+    }, [inView]);
 
     const services = [
         {
@@ -54,15 +79,17 @@ const Services = () => {
                         Our Services
                     </p>
                 </div>
-                <div className='grid sm:grid-cols-2 sm:p-0 md:grid-cols-3 gap-8 px-10 md:pt-11 pt-9'>
+                <div ref={ref} className='grid sm:grid-cols-2 sm:p-0 md:grid-cols-3 gap-8 px-10 md:pt-11 pt-9'>
                     {
                         services.map(({ id, src, title }) => (
-                            <div key={id} className='shadow-md shadow-blue-400 rounded-lg'>
+                            <motion.div key={id}
+                                animate={animation}
+                                className='shadow-md shadow-blue-400 rounded-lg'>
                                 <img src={src} alt={title} className="rounded-md hover:scale-105 duration-200 md:max-h-52 w-full" />
                                 <div className='flex first-letter:items-center justify-center'>
                                     <button className='w-full px-4 py-1 font-semibold duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </div>
