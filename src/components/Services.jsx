@@ -84,10 +84,10 @@ const Services = () => {
                         services.map(({ id, src, title }) => (
                             <motion.div key={id}
                                 animate={animation}
-                                className='shadow-md shadow-blue-400 rounded-lg bg-white'>
+                                className='shadow-md shadow-blue-400 rounded-lg bg-gray-800 border border-gray-400'>
                                 <img src={src} alt={title} className="rounded-md hover:scale-105 duration-200 md:max-h-52 w-full" />
                                 <div className='flex first-letter:items-center justify-center'>
-                                    <button className='font-paragraph w-full px-4 py-1 duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
+                                    <button className='font-paragraph w-full px-4 py-1 duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7 text-white'>{title}</button>
                                 </div>
                             </motion.div>
                         ))

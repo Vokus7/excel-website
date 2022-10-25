@@ -23,14 +23,14 @@ const HeroSection = () => {
                             transition={{ type: 'spring', bounce: 0.3, duration: 3 }}
                             className="absolute z-10 mt-24 md:mt-40 md:px-10 w-full">
                             <div className="flex flex-col justify-center w-full py-0 my-0 h-96 md:mt-0 mt-16 px-8 backdrop-blur-sm relative">
-                                <h2 className="text-5xl sm:text-7xl font-bold text-green-400 font-serif">
+                                <h2 className="font-paragraph text-5xl sm:text-7xl font-bold text-green-500 font-serif">
                                     EXCEL
                                 </h2>
                                 <h4 className="text-3xl sm:text-4xl font-bold text-white py-2">
                                     PROSTHETICS AND DENTAL CARE
                                 </h4>
-                                <p className="font-paragraph py-4 max-w-lg text-2xl md:text-2xl text-slate-300">
-                                    Welcome to Excel Prosthetics and Dental Care, Your one stop for everything dental related. We enjoin you
+                                <p className="font-paragraph py-4 max-w-lg text-2xl md:text-2xl text-white">
+                                    Welcome to Excel Prosthetics and Dental Care, your one stop for everything dental related. We enjoin you
                                     to browse through our gallery to see equisite and world-class restorative dental prosthetics and
                                     treatment procedures.
                                 </p>
