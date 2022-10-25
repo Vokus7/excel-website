@@ -13,9 +13,7 @@ const About = () => {
                 <div className='flex flex-col'>
                     <div className='w-full'>
                         <p className='text-xl mt-11 leading-9 mx-auto'>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium quae numquam incidunt dicta
-                            reprehenderit sequi deserunt excepturi delectus, asperiores expedita sint error ut, voluptate illum
-                            atque eveniet dolores doloribus natus rerum veniam voluptates fugiat perferendis? Recusandae deserunt
+                            We are a dental clinic based in Benin 
                         </p>
                     </div>
                     <div className='w-full mx-auto md:mt-16'>
