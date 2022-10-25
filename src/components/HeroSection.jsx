@@ -17,7 +17,11 @@ const HeroSection = () => {
                     <div className="relative h-screen w-full flex px-auto">
                         <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full">
                         </div>
-                        <div className="absolute z-10 mt-24 md:mt-40 md:px-10 w-full">
+                        <motion.div
+                            initial={{ opacity: 0, translateX: '1000px' }}
+                            animate={{ opacity: 1, translateX: 0 }}
+                            transition={{ type: 'spring', bounce: 0.3, duration: 3 }}
+                            className="absolute z-10 mt-24 md:mt-40 md:px-10 w-full">
                             <div className="flex flex-col justify-center w-full py-0 my-0 h-96 md:mt-0 mt-16 px-8 backdrop-blur-sm relative">
                                 <h2 className="text-5xl sm:text-7xl font-bold text-green-400 font-serif">
                                     EXCEL
@@ -25,11 +29,13 @@ const HeroSection = () => {
                                 <h4 className="text-3xl sm:text-4xl font-bold text-white py-2">
                                     PROSTHETICS AND DENTAL CARE
                                 </h4>
-                                <p className="py-4 max-w-md font-semibold md:text-2xl text-white">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum reprehenderit aliquam minima ratione nesciunt! Ipsa dicta dolores commodi nihil consectetur.
+                                <p className="font-paragraph py-4 max-w-lg text-2xl md:text-2xl text-slate-300">
+                                    Welcome to Excel Prosthetics and Dental Care, Your one stop for everything dental related. We enjoin you
+                                    to browse through our gallery to see equisite and world-class restorative dental prosthetics and
+                                    treatment procedures.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

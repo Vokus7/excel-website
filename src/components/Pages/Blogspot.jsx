@@ -7,7 +7,7 @@ import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 
 const Blogspot = () => {
     return (
-        <div className='w-full h-fit bg-slate-50'>
+        <div className='w-full h-fit bg-slate-200'>
             <div className='w-full h-full flex flex-col'>
                 <div className="md:h-96 w-full relative pb-4">
                     <div className="absolute w-full">
@@ -17,10 +17,10 @@ const Blogspot = () => {
                     <div className="relative h-60 w-full flex">
                         <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full md:h-96 sm:h-72">
                         </div>
-                        <div className="absolute z-10 mt-24 md:mt-56 sm:mt-48 px-4">
+                        <div className="absolute z-10 mt-24 md:mt-52 sm:mt-48 px-4">
                             <h2 className='text-blue-400 text-3xl md:text-6xl font-bold'>Welcome to our blog</h2>
                             <p className='text-white md:text-3xl md:pr-80 font-semibold font-["Open_Sans"]'>Explore exciting, educative and informative dental articles here.
-                                We are dedicated to improving both your oral health and your oral health knowledge</p>
+                                We are dedicated to improving both your oral health and your oral health knowledge.</p>
                         </div>
                     </div>
                 </div>

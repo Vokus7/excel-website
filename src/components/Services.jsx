@@ -35,7 +35,7 @@ const Services = () => {
                 x: '-100vw'
             })
         }
-    }, [inView]);
+    });
 
     const services = [
         {
@@ -72,10 +72,10 @@ const Services = () => {
 
 
     return (
-        <div name="services" className='h-fit w-full mb-10 pb-6 md:pt-4 pt-16'>
+        <div name="services" className='h-fit w-full mb-10 pb-16 md:pt-4 pt-16 bg-slate-200'>
             <div className='max-w-screen-lg px-4 md:pt-12 mx-auto flex flex-col justify-start items-center w-full h-full'>
                 <div className='mt-2'>
-                    <p className='text-3xl font-bold inline py-2 border-b-4 border-blue-400 text-gray-900 w-fit leading-relaxed mb-5'>
+                    <p className='font-lora text-3xl font-bold inline py-2 border-b-4 border-blue-400 text-gray-900 w-fit leading-relaxed mb-5'>
                         Our Services
                     </p>
                 </div>
@@ -84,10 +84,10 @@ const Services = () => {
                         services.map(({ id, src, title }) => (
                             <motion.div key={id}
                                 animate={animation}
-                                className='shadow-md shadow-blue-400 rounded-lg'>
+                                className='shadow-md shadow-blue-400 rounded-lg bg-white'>
                                 <img src={src} alt={title} className="rounded-md hover:scale-105 duration-200 md:max-h-52 w-full" />
                                 <div className='flex first-letter:items-center justify-center'>
-                                    <button className='w-full px-4 py-1 font-semibold duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
+                                    <button className='font-paragraph w-full px-4 py-1 duration-200 hover:scale-105 h-12 max-h-8 md:max-h-7'>{title}</button>
                                 </div>
                             </motion.div>
                         ))

@@ -13,7 +13,7 @@ const Blog1 = () => {
         <section name="blog" className="bg-gradient-to-bl from-gray-900 to-[#0F1D39] text-gray-100">
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 pt-8 md:pt-16 pb-8">
                 <div className='flex justify-center items-center w-full'>
-                    <p className='text-3xl font-bold inline w-fit leading-relaxed text-white mb-8 py-2 mx-10 border-b-4 border-blue-400'>
+                    <p className='font-lora text-3xl font-bold inline w-fit leading-relaxed text-white mb-8 py-2 mx-10 border-b-4 border-blue-400'>
                         Blog
                     </p>
                 </div>
