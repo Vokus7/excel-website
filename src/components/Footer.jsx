@@ -7,7 +7,7 @@ const Footer = () => {
         <div className='flex flex-col w-full h-fit py-4 bg-[#0F1D39] text-white pt-8 sm:pt-8'>
             <div className='flex flex-col md:flex-row w-full px-8'>
                 <div className='flex flex-col px-2'>
-                    <div className='pb-6 mr-8'>
+                    <div className='pb-6 mr-8 md:w-[500px]'>
                         <p className='text-2xl text-green-600 font-semibold py-1 font-["Open_Sans"]'>
                             Don't Miss Out
                         </p>
@@ -41,12 +41,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='h-11 border-t border-gray-400 md:py-3 w-11/12 mx-auto mt-4'>
-                <div className='flex justify-center md:justify-start mt-2 py-3 md:py-4 items-center h-full'>
-                    <span className='px-2 '><FaFacebook size={30} className="fill-blue-600 cursor-pointer hover:scale-110 duration-200" /></span>
-                    <span className='px-2'><FaTwitter size={30} className="fill-blue-500 cursor-pointer hover:scale-110 duration-200" /></span>
-                    <span className='px-2'><FaInstagram size={30} className="fill-pink-600 cursor-pointer hover:scale-110 duration-200" /></span>
-                    <span className='px-2'><FaWhatsapp size={30} className="fill-green-600 cursor-pointer hover:scale-110 duration-200" /></span>
+            <div className='flex flex-col items-center h-full md:h-11 border-t border-gray-400 md:py-3 w-11/12 mx-auto mt-4'>
+                <div className='font-lora justify-center items-center pt-2 md:pt-0 md:text-md'>
+                    <p>Copyright &#169; 2022 by Excel</p>
                 </div>
             </div>
         </div>
