@@ -3,7 +3,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { Link as NavLink } from "react-router-dom";
 import Logo from '../assets/logo/White logo.svg';
+import { RiArrowDropDownLine } from "react-icons/ri";
 import Dropdown from "./Dropdown";
+import { AnimatePresence, motion } from 'framer-motion';
+import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
+
 
 
 const NavBar = () => {
@@ -25,17 +29,42 @@ const NavBar = () => {
         },
         {
             id: 4,
-            link: 'contact us'
+            link: 'contact us',
+            icon: <RiArrowDropDownLine size={25} />
         },
         {
             id: 5,
             link: 'blog'
+        }
+    ];
+
+    const DropdownList = [
+        {
+            id: 1,
+            link: '/',
+            title: 'Whatsapp',
+            icon: <FaWhatsapp size={20} />
         },
         {
-            id: 5,
-            link: 'testimonials'
-        }
-    ]
+            id: 2,
+            link: '/',
+            title: 'Facebook',
+            icon: <FaFacebook size={20} />
+        },
+        {
+            id: 3,
+            link: '/',
+            title: 'Twitter',
+            icon: <FaTwitter size={20} />
+        },
+        {
+            id: 4,
+            link: '/',
+            title: 'Instagram',
+            icon: <FaInstagram size={20} />
+        },
+    ];
+
 
 
     return (
@@ -45,17 +74,18 @@ const NavBar = () => {
                     <NavLink to="/" smooth duration={600} className="cursor-pointer"><img src={Logo} alt="excel logo" /></NavLink>
                 </h1>
             </div>
-            <ul className="hidden md:flex h-full items-center">
-                {links.map(({ id, link }) => {
+            <ul className="hidden md:flex h-full items-center px-4">
+                {links.map(({ id, link, icon }) => {
                     if (link === "contact us") {
                         return (
                             <li key={id}
                                 onMouseEnter={() => setDropdown(true)}
                                 onMouseLeave={() => setDropdown(false)} className="h-full flex items-center justify-center">
                                 <Link to={link}
-                                    smooth duration={600}>
-                                    <span className="h-full font-lora px-6 cursor-pointer capitalize font-medium
-                             text-white hover:text-[#719FFB]">{link}</span>
+                                    smooth duration={600} className="group w-fit flex items-center justify-center px-3 py-1 
+                                    hover:bg-[#719FFB] hover:rounded-sm">
+                                    <span className="h-full font-lora cursor-pointer capitalize font-medium
+                             text-white">{link}</span><span>{icon}</span>
                                 </Link>
                                 {dropdown && <Dropdown />}
                             </li>
@@ -63,9 +93,10 @@ const NavBar = () => {
                     }
                     return (
                         <li key={id} className="h-full flex items-center justify-center">
-                            <Link to={link} smooth duration={600}>
-                                <span className="font-lora px-4 cursor-pointer capitalize font-medium
-                         text-white hover:text-[#719FFB] hover:scale-105 duration-200">{link}</span>
+                            <Link to={link} smooth duration={600} className="group w-fit flex items-center justify-center 
+                            px-3 py-1 hover:bg-[#719FFB] hover:rounded-sm">
+                                <span className="font-lora cursor-pointer capitalize font-medium
+                         text-white">{link}</span><span>{icon}</span>
                             </Link>
                         </li>)
                 })}
@@ -76,16 +107,63 @@ const NavBar = () => {
             </div>
 
             {nav && (
-                <ul className="flex flex-col justify-center items-center absolute top-16 translate-x-0 left-0 w-52 h-70
-                 bg-[#0F1D39] text-white">
-                    {links.map(({ id, link }) => (
-                        <li key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-2xl py-6">
-                            <Link onClick={() => setNav(!nav)} to={link} smooth duration={600}>
-                                {link}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <motion.ul
+                    initial={{ opacity: 0, translateX: '-200px' }}
+                    animate={{ opacity: 1, translateX: 0 }}
+                    transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
+                    className="flex flex-col justify-center items-center absolute top-16 left-0 w-44 h-fit
+                 bg-[#0F1D39] text-white py-2">
+                    {links.map(({ id, link, icon }) => {
+                        if (link === "contact us") {
+                            return (
+                                <motion.li
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
+                                    key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-1xl py-3">
+                                    <Link onClick={() => setDropdown(!dropdown)} to={link} className="group w-full flex 
+                                    items-center justify-center">
+                                        {link}<span>{icon}</span>
+                                    </Link>
+                                    <AnimatePresence >
+                                        <motion.ul
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
+                                            className={dropdown ? "flex flex-col mt-[20px] bg-[#719FFB]" : "hidden"}
+                                            onClick={() => setDropdown(!dropdown)}>
+                                            {dropdown && DropdownList.map((item) => {
+                                                return (
+
+                                                    <li
+                                                        key={item.id} className='flex justify-center w-full items-center 
+                                                    hover:bg-[#2C487F] p-2 flex-column font-lora '>
+                                                        <NavLink to={item.link} onClick={() => setDropdown(false)}>
+                                                            <div className='flex mx-2 items-center justify-start w-36'>
+                                                                <span className='fill-black cursor-pointer pr-4'>{item.icon}</span>
+                                                                <span className='pr-3'>
+                                                                    {item.title}</span>
+                                                            </div>
+                                                        </NavLink>
+                                                    </li>
+
+                                                )
+                                            })}
+
+                                        </motion.ul></AnimatePresence>
+                                </motion.li>
+                            )
+                        }
+                        return (
+                            <li key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-1xl py-3">
+                                <Link onClick={() => setNav(!nav)} to={link} className="group w-fit flex items-center justify-center">
+                                    {link}<span>{icon}</span>
+                                </Link>
+                            </li>
+                        )
+
+                    })}
+                </motion.ul>
             )}
         </div>
     );
