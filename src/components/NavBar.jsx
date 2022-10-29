@@ -105,38 +105,34 @@ const NavBar = () => {
             <div onClick={() => setNav(!nav)} className="pr-4 z-10 cursor-pointer text-white md:hidden">
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
-
+            <AnimatePresence>
             {nav && (
                 <motion.ul
                     initial={{ opacity: 0, translateX: '-200px' }}
                     animate={{ opacity: 1, translateX: 0 }}
+                        exit={{ translateX: '-200px' }}
                     transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
                     className="flex flex-col justify-center items-center absolute top-16 left-0 w-44 h-fit
-                 bg-[#0F1D39] text-white py-2">
+                    bg-[#0F1D39] text-white py-3 rounded-sm">
                     {links.map(({ id, link, icon }) => {
                         if (link === "contact us") {
                             return (
-                                <motion.li
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
-                                    key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-1xl py-3">
+                                <AnimatePresence>
+                                    <motion.li
+                                        intial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        layout
+                                        key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-[19px] py-3">
                                     <Link onClick={() => setDropdown(!dropdown)} to={link} className="group w-full flex 
                                     items-center justify-center">
                                         {link}<span>{icon}</span>
                                     </Link>
-                                    <AnimatePresence >
-                                        <motion.ul
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ type: 'spring', bounce: 0.1, duration: 1 }}
-                                            className={dropdown ? "flex flex-col mt-[20px] bg-[#719FFB]" : "hidden"}
+                                        <ul className={dropdown ? "flex flex-col mt-[20px] bg-[#719FFB]" : "hidden"}
                                             onClick={() => setDropdown(!dropdown)}>
                                             {dropdown && DropdownList.map((item) => {
                                                 return (
-
-                                                    <li
-                                                        key={item.id} className='flex justify-center w-full items-center 
+                                                    <li key={item.id} className='flex justify-center w-full items-center 
                                                     hover:bg-[#2C487F] p-2 flex-column font-lora '>
                                                         <NavLink to={item.link} onClick={() => setDropdown(false)}>
                                                             <div className='flex mx-2 items-center justify-start w-36'>
@@ -146,16 +142,15 @@ const NavBar = () => {
                                                             </div>
                                                         </NavLink>
                                                     </li>
-
                                                 )
                                             })}
-
-                                        </motion.ul></AnimatePresence>
-                                </motion.li>
+                                        </ul>
+                                    </motion.li>
+                                </AnimatePresence>
                             )
                         }
                         return (
-                            <li key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-1xl py-3">
+                            <li key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-[19px] py-3">
                                 <Link onClick={() => setNav(!nav)} to={link} className="group w-fit flex items-center justify-center">
                                     {link}<span>{icon}</span>
                                 </Link>
@@ -164,7 +159,9 @@ const NavBar = () => {
 
                     })}
                 </motion.ul>
+
             )}
+            </AnimatePresence>
         </div>
     );
 }

@@ -38,15 +38,18 @@ const Dropdown = () => {
 
     return (
         <>
-            <ul className={dropdown ? "hidden" : "flex flex-col absolute mt-[223px] bg-[#719FFB] rounded-sm"} onClick={() => setDropdown(!dropdown)}>
+            <ul className={dropdown ? "hidden" : "flex flex-col absolute mt-[223px] bg-[#719FFB] rounded-sm"} onClick={() =>
+                setDropdown(!dropdown)}>
                 {DropdownList.map((item) => {
                     return (
                         <div>
-                            <li key={item.id} className='flex justify-between w-full items-center hover:bg-[#2C487F] p-2 flex-column
+                            <li key={item.id} className='flex justify-between w-full items-center hover:bg-[#2C487F] p-2 
+                            flex-column
                         font-lora '>
                                 <Link to={item.link} onClick={() => setDropdown(false)}>
                                     <div className='flex mx-2 items-center justify-between w-full'>
-                                        <span>{item.title}</span><span className='fill-black cursor-pointer pr-2'>{item.icon}</span>
+                                        <span className='fill-black cursor-pointer'>{item.icon}</span><span className='pr-3'>
+                                            {item.title}</span>
                                     </div>
                                 </Link>
                             </li>

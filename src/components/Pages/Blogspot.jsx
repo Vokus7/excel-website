@@ -12,14 +12,14 @@ const Blogspot = () => {
                 <div className="md:h-96 w-full relative pb-4">
                     <div className="absolute w-full">
                         <img src="https://cdn.pixabay.com/photo/2017/08/05/14/59/chair-2584260_960_720.jpg"
-                            alt="clinic" className="object-contain md:object-fill absolute sm:object-fill w-full sm:h-72 md:h-96" />
+                            alt="clinic" className="object-contain md:object-fill absolute sm:object-fill h-60 w-full sm:h-72 md:h-96" />
                     </div>
                     <div className="relative h-60 w-full flex">
                         <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full md:h-96 sm:h-72">
                         </div>
                         <div className="absolute z-10 mt-24 md:mt-52 sm:mt-48 px-4">
                             <h2 className='text-blue-400 text-3xl md:text-6xl font-bold'>Welcome to our blog</h2>
-                            <p className='text-white md:text-3xl md:pr-80 font-semibold font-["Open_Sans"]'>Explore exciting, educative and informative dental articles here.
+                            <p className='text-white md:text-3xl md:pr-80 font-semibold font-lora'>Explore exciting, educative and informative dental articles here.
                                 We are dedicated to improving both your oral health and your oral health knowledge.</p>
                         </div>
                     </div>
