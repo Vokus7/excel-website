@@ -23,7 +23,7 @@ const HeroSection = () => {
                             transition={{ type: 'spring', bounce: 0.3, duration: 3 }}
                             className="absolute z-10 mt-24 md:mt-40 md:px-10 w-full">
                             <div className="flex flex-col justify-center w-fit py-0 my-0 h-96 md:mt-0 mt-16 px-8 backdrop-blur-sm relative">
-                                <h2 className="font-paragraph text-5xl sm:text-7xl font-bold text-green-500 font-serif">
+                                <h2 className="font-paragraph text-5xl sm:text-7xl font-bold text-[#719FFB] font-serif">
                                     EXCEL
                                 </h2>
                                 <h4 className="text-3xl sm:text-4xl font-bold text-white py-2">

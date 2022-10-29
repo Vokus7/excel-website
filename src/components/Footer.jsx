@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { Link as NavLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
             <div className='flex flex-col md:flex-row w-full px-8'>
                 <div className='flex flex-col px-2'>
                     <div className='pb-6 mr-8 md:w-[500px]'>
-                        <p className='text-2xl text-green-600 font-semibold py-1 font-["Open_Sans"]'>
+                        <p className='text-2xl text-[#719FFB] font-semibold py-1 font-["Open_Sans"]'>
                             Don't Miss Out
                         </p>
                         <p className='py-1 font-lora text-lg'>
@@ -27,17 +26,17 @@ const Footer = () => {
                 </div>
                 <div className='flex md:flex-row flex-col'>
                     <div className='flex flex-col py-4 px-2'>
-                        <span className='text-2xl font-semibold text-green-600 font-["Open_Sans"]'>WORKING HOURS</span>
+                        <span className='text-2xl font-semibold text-[#719FFB] font-["Open_Sans"]'>WORKING HOURS</span>
                         <span className='py-1 font-lora md:text-lg text-md'>Monday-Friday: 8:00am - 6:00pm</span>
                         <span className='py-1 font-lora md:text-lg text-md'>Saturdays: 9:00am - 6:00pm</span>
                     </div>
                     <div className='flex flex-col py-4 pl-2 md:pl-8'>
-                        <span className='text-2xl font-semibold text-green-600 font-["Open_Sans"]'>Links</span>
-                        <NavLink to="services" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-green-600'>Services</span></NavLink>
-                        <NavLink to="gallery" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-green-600'>Gallery</span></NavLink>
-                        <NavLink to="blog" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-green-600'>Blog</span></NavLink>
-                        <NavLink to="about us" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-green-600'>About Us</span></NavLink>
-                        <NavLink to="/" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-green-600'>Home</span></NavLink>
+                        <span className='text-2xl font-semibold text-[#719FFB] font-["Open_Sans"]'>Links</span>
+                        <NavLink to="services" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Services</span></NavLink>
+                        <NavLink to="gallery" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Gallery</span></NavLink>
+                        <NavLink to="blog" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Blog</span></NavLink>
+                        <NavLink to="about us" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>About Us</span></NavLink>
+                        <NavLink to="/" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Home</span></NavLink>
                     </div>
                 </div>
             </div>
