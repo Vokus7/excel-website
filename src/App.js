@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Blogspot from './components/Pages/Blogspot';
 import Home from './components/Pages/Home';
+import ScrollToTop from './components/ScrollToTop';
 import SocialLinks from './components/SocialLinks';
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <Router>
       <div>
+        <ScrollToTop />
       <SocialLinks />
       <NavBar />
         <Switch>

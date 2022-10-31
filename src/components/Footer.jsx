@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link as NavLink } from 'react-router-dom';
+import { Link } from "react-scroll";
+
 
 const Footer = () => {
     return (
@@ -31,11 +33,11 @@ const Footer = () => {
                         <span className='py-1 font-lora md:text-lg text-md'>Saturdays: 9:00am - 6:00pm</span>
                     </div>
                     <div className='flex flex-col py-4 pl-2 md:pl-8'>
-                        <span className='text-2xl font-semibold text-[#719FFB] font-["Open_Sans"]'>Links</span>
-                        <NavLink to="services" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Services</span></NavLink>
+                        <span className='text-2xl font-semibold text-[#719FFB] font-["Open_Sans"]'>LINKS</span>
+                        <Link to="services" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Services</span></Link>
                         <NavLink to="gallery" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Gallery</span></NavLink>
-                        <NavLink to="blog" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Blog</span></NavLink>
-                        <NavLink to="about us" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>About Us</span></NavLink>
+                        <NavLink to="/blogspot"><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Blog</span></NavLink>
+                        <Link to="about us" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>About Us</span></Link>
                         <NavLink to="/" smooth duration={600}><span className='py-1 font-lora md:text-lg text-md cursor-pointer hover:text-[#719FFB]'>Home</span></NavLink>
                     </div>
                 </div>

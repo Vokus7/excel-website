@@ -9,17 +9,17 @@ const Blogspot = () => {
     return (
         <div className='w-full h-fit bg-slate-200'>
             <div className='w-full h-full flex flex-col'>
-                <div className="md:h-96 w-full relative pb-4">
+                <div className="md:h-[500px] w-full relative pb-4">
                     <div className="absolute w-full">
-                        <img src="https://cdn.pixabay.com/photo/2017/08/05/14/59/chair-2584260_960_720.jpg"
-                            alt="clinic" className="object-contain md:object-fill absolute sm:object-fill h-60 w-full sm:h-72 md:h-96" />
+                        <img src="https://images.pexels.com/photos/6809647/pexels-photo-6809647.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-6809647.jpg&fm=jpg&_gl=1*ppev8q*_ga*MTQ1NTUxOTI3NC4xNjYzNzUwMDM5*_ga_8JE65Q40S6*MTY2NzEyNTYwNC40LjEuMTY2NzEyNjE5MS4wLjAuMA.."
+                            alt="clinic" className="object-fill md:object-cover absolute sm:object-fill h-[335px] w-full sm:h-72 md:h-[500px]" />
                     </div>
-                    <div className="relative h-60 w-full flex">
-                        <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full md:h-96 sm:h-72">
+                    <div className="relative md:h-[500px] h-[335px] w-full flex">
+                        <div className="flex-shrink-0 backdrop-filter backdrop-brightness-50 w-full md:h-[500px] sm:h-72">
                         </div>
-                        <div className="absolute z-10 mt-24 md:mt-52 sm:mt-48 px-4">
-                            <h2 className='text-blue-400 text-3xl md:text-6xl font-bold'>Welcome to our blog</h2>
-                            <p className='text-white md:text-3xl md:pr-80 font-semibold font-lora'>Explore exciting, educative and informative dental articles here.
+                        <div className="absolute z-10 mt-36 md:mt-60 sm:mt-48 px-4 md:h-[500px]">
+                            <h2 className='text-[#719FFB] text-3xl md:text-6xl font-bold font-lora'>Welcome to our blog</h2>
+                            <p className='text-white md:text-3xl text-[20px] md:pr-80 font-semibold font-lora'>Explore exciting, educative and informative dental articles here.
                                 We are dedicated to improving both your oral health and your oral health knowledge.</p>
                         </div>
                     </div>

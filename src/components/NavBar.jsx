@@ -121,7 +121,6 @@ const NavBar = () => {
                                     <motion.li
                                         intial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
                                         layout
                                         key={id} className="font-lora font-medium px-4 cursor-pointer capitalize text-[19px] py-3">
                                     <Link onClick={() => setDropdown(!dropdown)} to={link} className="group w-full flex 
@@ -137,8 +136,7 @@ const NavBar = () => {
                                                         <NavLink to={item.link} onClick={() => setDropdown(false)}>
                                                             <div className='flex mx-2 items-center justify-start w-36'>
                                                                 <span className='fill-black cursor-pointer pr-4'>{item.icon}</span>
-                                                                <span className='pr-3'>
-                                                                    {item.title}</span>
+                                                                <span className='pr-3'>{item.title}</span>
                                                             </div>
                                                         </NavLink>
                                                     </li>
